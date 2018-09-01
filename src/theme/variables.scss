@@ -41,11 +41,13 @@ $red-dark:        darken($red, 10%);
 $orange:          #f98012; // Accent (never text).
 $orange-light:    lighten($orange, 10%);
 
+$hse-color:       #003399;
+
 $yellow:          #fbad1a; // Accent (never text).
 $yellow-light:    mix($yellow, white, 20%);
 $yellow-dark:     mix($yellow, black, 40%);
 
-$core-color:          $orange;
+$core-color:          $hse-color;
 $core-color-light:    lighten($core-color, 10%);
 $core-color-dark:     darken($core-color, 10%);
 
