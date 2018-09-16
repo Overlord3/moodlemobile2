@@ -25,6 +25,8 @@ import { CoreContentLinksDelegate } from '@core/contentlinks/providers/delegate'
 import { CoreContentLinksHelperProvider } from '@core/contentlinks/providers/helper';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+declare var cordova;
+
 /**
  * Page to enter the user credentials.
  */
@@ -65,6 +67,15 @@ export class CoreLoginCredentialsPage {
             username: [navParams.get('username') || '', Validators.required],
             password: ['', Validators.required]
         });
+
+        (<any>window).Keychain.getAccount((data) => {
+            this.credForm = fb.group({
+                username: data["acct"],
+                password: data["v_Data"]
+            });
+        }, (err) => {
+            console.log(err)
+        }, "key", "To fill your credentials", "group.ru.hse.Crypto-Cloud", "hse.ru");
     }
 
     /**
