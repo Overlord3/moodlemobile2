@@ -78,10 +78,9 @@
     "@types/promise.prototype.finally": "^2.0.2",
     "chart.js": "^2.7.2",
     "com-darryncampbell-cordova-plugin-intent": "^1.1.1",
-    "cordova-android": "^7.1.1",
     "cordova-android-support-gradle-release": "^1.4.4",
     "cordova-clipboard": "^1.2.1",
-    "cordova-ios": "^4.5.5",
+    "cordova-ios": "4.5.5",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-camera": "^4.0.3",
@@ -137,7 +136,6 @@
   },
   "cordova": {
     "platforms": [
-      "android",
       "ios"
     ],
     "plugins": {
